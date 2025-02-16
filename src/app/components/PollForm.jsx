@@ -25,10 +25,12 @@ const PollForm = () => {
     e.preventDefault();
     setLoading(true);
 
+
     const pollData = {
       question,
-      options: options.map(optionText => ({ optionText, votes: 0 })),
+      options,  // Don't re-map options, use the existing array
     };
+    console.log("Poll Data to be submitted:", pollData);
 
     try {
       const response = await fetch('/api/newpoll', {

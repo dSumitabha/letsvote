@@ -16,19 +16,12 @@ const NavBar = () => {
 
         {/* Create Post */}
         <li className="text-center">
-          <a href="/create-post" className="flex flex-col items-center text-gray-500 hover:text-blue-500">
+          <Link href="/createpolls" className="flex flex-col items-center text-gray-500 hover:text-blue-500">
             <AiOutlinePlus className="w-6 h-6" />
-            <span className="text-xs mt-1">Post</span>
-          </a>
-        </li>
-
-        {/* Profile */}
-        <li className="text-center">
-          <Link href="/profile" className="flex flex-col items-center text-gray-500 hover:text-blue-500">
-            <AiOutlineUser className="w-6 h-6" />
-            <span className="text-xs mt-1">Profile</span>
+            <span className="text-xs mt-1">Poll</span>
           </Link>
         </li>
+
       </ul>
     </nav>
   );

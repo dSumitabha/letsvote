@@ -1,5 +1,5 @@
 import dbConnect from '@/lib/db';
-import User from '@/models/User';
+import Poll from '@/models/Poll';
 
 export async function GET() {
   try {
@@ -7,10 +7,10 @@ export async function GET() {
     await dbConnect();
 
     // Fetch all users from the `users` collection
-    const users = await User.find({});
+    const polls = await Poll.find({});
 
     // Return the users as a JSON response
-    return new Response(JSON.stringify(users), {
+    return new Response(JSON.stringify(polls), {
       status: 200,
       headers: { 'Content-Type': 'application/json' },
     });
